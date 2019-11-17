@@ -9,6 +9,7 @@
 import Foundation
 
 struct CellViewModel: Decodable {
+    
     let firstProperty: String
     let secondProperty: String
     let thirdProperty: String

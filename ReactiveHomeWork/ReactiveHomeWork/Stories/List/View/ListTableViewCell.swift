@@ -14,10 +14,6 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var secondProperty: UILabel!
     @IBOutlet weak var thirdProperty: UILabel!
     @IBOutlet weak var fourthProperty: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
     
     func configureCell(with model: CellViewModel) {
         

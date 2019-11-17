@@ -80,7 +80,7 @@ class ListViewController: UIViewController {
                     self.blankView.isHidden = true
                 }
             }
-        }
+        }.disposed(by: disposeBag)
         
         viewModel.fetchedArray
             .bind(to: tableView.rx.items(cellIdentifier: "cell")) { row, model, cell in
@@ -113,7 +113,7 @@ class ListViewController: UIViewController {
         
         showSettingsBarButton.rx.tap.bind {
             self.presentSettingsScreen()
-        }
+        }.disposed(by: disposeBag)
     }
     
     //MARK: - Helpers

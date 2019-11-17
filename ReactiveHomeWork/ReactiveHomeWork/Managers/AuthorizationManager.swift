@@ -25,5 +25,4 @@ class AuthotizationManager {
     func getUserInfo() -> BehaviorRelay<(login: String, contentType: UserContentType)> {
         return BehaviorRelay(value:(user.login, user.contentType))
     }
-    
 }
