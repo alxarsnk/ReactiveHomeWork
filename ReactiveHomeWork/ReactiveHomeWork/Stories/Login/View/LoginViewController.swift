@@ -107,24 +107,12 @@ final class LoginViewController: UIViewController {
         
         /// Действие при нажатии на return key поля логина
         loginTextField.rx.controlEvent(.editingDidEndOnExit).asObservable().bind {
-            self.loginTextField.resignFirstResponder()
             self.passwordTextField.becomeFirstResponder()
-
         }.disposed(by: disposeBag)
-        
-         /// Действие при нажатии на textField логина
-        loginTextField.rx.controlEvent(.touchDown).asObservable().bind {
-            self.passwordTextField.resignFirstResponder()
-        }.disposed(by: disposeBag)
-        
+    
         /// Действие при нажатии на return key поля пароля
         passwordTextField.rx.controlEvent(.editingDidEndOnExit).asObservable().bind {
             self.viewModel.validateUser()
-        }.disposed(by: disposeBag)
-        
-        /// Действие при нажатии на textField пароля
-        passwordTextField.rx.controlEvent(.touchDown).asObservable().bind {
-            self.loginTextField.resignFirstResponder()
         }.disposed(by: disposeBag)
         
         
@@ -139,25 +127,7 @@ final class LoginViewController: UIViewController {
                 self.presentListViewController()
             }
         }.disposed(by: disposeBag)
-    Observable.merge(NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification),
-                     NotificationCenter.default.rx.notification(UIResponder.keyboardWillHideNotification))
-        .subscribe(onNext: { [unowned self] (notification) in
-            if notification.name == UIResponder.keyboardWillShowNotification {
-                self.animateWithKeyboard(kbHeight: 20)
-            } else {
-                self.animateWithKeyboard(kbHeight: -20)
-            }
-        })
-        .disposed(by: disposeBag)
-    }
-    
-    private func animateWithKeyboard(kbHeight: CGFloat) {
         
-        let newConstant = helpLabelHeight.constant - kbHeight
-        self.helpLabelHeight.constant = newConstant
-        UIView.animate(withDuration: 0.25) {
-            self.view.layoutIfNeeded()
-        }
     }
         
 //MARK: - Navigation

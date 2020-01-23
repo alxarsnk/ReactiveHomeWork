@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uKt-QX-Exe">
-                                <rect key="frame" x="24" y="340.5" width="366" height="93"/>
+                                <rect key="frame" x="24" y="272.5" width="366" height="93"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nuj-jl-Ead">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="34"/>
@@ -31,13 +31,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho5-t8-1Yg">
-                                <rect key="frame" x="24" y="44" width="366" height="272.5"/>
+                                <rect key="frame" x="24" y="44" width="366" height="204.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScR-me-tcN">
-                                <rect key="frame" x="24" y="457.5" width="366" height="20.5"/>
+                                <rect key="frame" x="24" y="389.5" width="366" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="ho5-t8-1Yg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="050-2q-bmc"/>
                             <constraint firstItem="ScR-me-tcN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="2BO-Pa-HFb"/>
                             <constraint firstItem="uKt-QX-Exe" firstAttribute="top" secondItem="ho5-t8-1Yg" secondAttribute="bottom" constant="24" id="2SN-PL-tWd"/>
-                            <constraint firstItem="ho5-t8-1Yg" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1/3" id="DhR-uT-QxN"/>
+                            <constraint firstItem="ho5-t8-1Yg" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1/4" id="DhR-uT-QxN"/>
                             <constraint firstItem="ho5-t8-1Yg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="H5x-Ud-SXW"/>
                             <constraint firstItem="ScR-me-tcN" firstAttribute="top" secondItem="uKt-QX-Exe" secondAttribute="bottom" constant="24" id="L81-52-mTq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AcX-Do-8pD" secondAttribute="bottom" constant="5" id="YEJ-IB-7ZI"/>

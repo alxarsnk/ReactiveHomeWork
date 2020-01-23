@@ -75,9 +75,13 @@ class ListViewController: UIViewController {
                 case .startLoading:
                     self.activityIndicator.startAnimating()
                     self.blankView.isHidden = false
+                    self.navigationItem.rightBarButtonItem?.isEnabled = false
+                    self.navigationController?.setNavigationBarHidden(true, animated: true)
                 case .finishLoading:
                     self.activityIndicator.stopAnimating()
                     self.blankView.isHidden = true
+                    self.navigationItem.rightBarButtonItem?.isEnabled = true
+                    self.navigationController?.setNavigationBarHidden(false, animated: true)
                 }
             }
         }.disposed(by: disposeBag)
